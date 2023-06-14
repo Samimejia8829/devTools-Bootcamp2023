@@ -1,30 +1,14 @@
-const num_max = 200;
-const numero = 99;
+const arrayPal = [1,2,3,4,5,6,7,8,9,11,22,33,44,55,66,77,88,99,101,111,121,131,141,151,161,171,181,191]
+const numero = 33;
 
-const siguientePalindromo = Nex_Pal(num_max, numero);
-
-function Num_Pal(num) {
-    let reversar = num.toString().split('').reverse().join('');
-    return num.toString() === reversar;
+function nex_Pal(numero) {
+    let index = arrayPal.indexOf(numero);
+        if (index <= arrayPal.length) {
+        let siguiente = arrayPal[index + 1];
+        console.log(`El siguiente palindromo después de ${numero} es: ${siguiente}`);
+    } else {
+        console.log(`No hay número palindromo después de ${numero}`);
+    }
 }
 
-function Nex_Pal(num_max, numero) {
-    let siguiente = 0;
-    let numeroActual = numero + 1;
-    
-    while (numeroActual <= num_max) {
-        if (Num_Pal(numeroActual)) {
-        siguiente = numeroActual;
-        break;        
-        }	
-    numeroActual++;
-    console.log(numeroActual)
-    }    
-    return siguiente;
-}
-
-if (siguientePalindromo !== 0) {
-    console.log("El siguiente número palíndromo después de " + numero + " es: " + siguientePalindromo);
-} else {
-    console.log("No se encontró un siguiente número palíndromo después de " + numero);
-};
+nex_Pal(numero)
