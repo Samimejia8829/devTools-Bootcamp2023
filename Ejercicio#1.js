@@ -1,5 +1,5 @@
 function nex_Pal(numero) {
-  while (numero >0) {
+  while (numero > 0) {
     numero++;
     const numeroString = numero.toString();
     let numreverse = numeroString.split("").reverse().join("");
@@ -11,4 +11,4 @@ function nex_Pal(numero) {
   console.log("El numero debe ser un entero positivo")
 }
 
-console.log(nex_Pal(43));
+console.log(nex_Pal(99));
